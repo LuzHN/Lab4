@@ -152,22 +152,47 @@ int main(){
 				for (int j = 0; j < 3; ++j)
 				{
 					if(i == 0){
-						arrsuperior[cont] = matriz1[i][j];
-						cont++;
-					} 
+						if(j == 0){
+							arrsuperior[0] = matriz1[i][j];
+							arrlateralizquierdo[0] = matriz1[i][j];
+							cont++;
+						}		
+						else if(i == 1 && j == 0){
+							arrsuperior[cont] = matriz1[i][j];
+							cont++;
+						}
+					}
 					else if(j == 2){
-						arrlateralderecho[cont] = matriz1[i][j];
-						cont++;
+						if(i == 0){
+							arrsuperior[2] = matriz1[i][j];
+							arrlateralderecho[0] = matriz1[i][j];
+							cont++;
+						}
+						else if(i != 0){
+
+							arrlateralderecho[cont] = matriz1[i][j];
+							cont++;
+						}
+						
 					}
 					else if(i == 2){
-						arrinferior[cont] = matriz1[i][j];
-						cont++;
+						if(j == 2){
+							arrinferior[2] = matriz1[i][j];
+							arrlateralderecho[2] = matriz1[i][j];
+							cont++;
+						}
+						else{
+							arrinferior[cont] = matriz1[i][j];
+							cont++;
+						}
 					}
 					else if(j == 0){
-						arrlateralizquierdo[cont] = matriz1[i][j];
+						arrinferior[0] = matriz1[i][j];
+						arrlateralizquierdo[2] = matriz1[i][j];
 						cont++;
 					}
 				}
+				cout << cont << endl;
 				cont = 0;
 			} //for para llenar arreglos matriz 1
 			cont = 0;
