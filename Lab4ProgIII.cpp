@@ -61,12 +61,148 @@ int main(){
 				"13. Salir" << endl << endl;
 		cin >> opcion;
 		if(opcion == 1){
-			
-			
-		}
 
-		cout << endl << "Quiere seguir? s/n ";
-		cin >> resp;
+			//matriz 3 col 1 -> matriz 5 col1
+			int arrderecho[3];
+			int arrabajo[3];
+			int arrizq[3];
+			int arrarriba[3];
+
+			int cont = 0;
+			for (int h = 0; h <= 4; ++h){
+				for (int i = 0; i < 3; ++i)
+				{
+					for (int j = 0; j < 3; ++j)
+					{
+						if(h == 1){
+							if(j == 0){
+								arrderecho[cont] = matriz5[i][j];
+								cont++;
+							}
+						}
+						else if(h == 2){
+							if(j == 0){
+								arrabajo[cont] = matriz4[i][j];
+								cont++;
+							}
+						}
+						else if(h == 3){
+							if(j == 2){
+								arrizq[cont] = matriz6[i][j];
+								cont++;
+							}
+						}
+						else if(h == 4){
+							if(j == 0){
+								arrarriba[cont] = matriz3[i][j];
+								cont++;
+							}
+						}
+
+						
+					}
+				}
+				cont = 0;
+			}
+
+			cont = 0;
+
+			for (int h = 0; h <= 4; ++h)
+			{
+				for (int i = 0; i < 3; ++i)
+				{
+					for (int j = 0; j < 3; ++j)
+					{
+						if(h == 1){
+							if(j == 0){
+								matriz5[i][j] = arrarriba[cont];
+								cont++;
+							}
+						}
+						else if(h == 2){
+							if(i == 0){
+								matriz4[i][j] = arrderecho[cont];
+								cont++;
+							}
+						}
+						else if(h == 3){
+							if(j == 2){
+								matriz6[i][j] = arrabajo[cont];
+								cont++;
+							}
+						}
+						else if(h == 4){
+							if(i == 2){
+								matriz3[i][j] = arrizq[cont];
+								cont++;
+							}
+						}
+					}
+				}
+				cont = 0;
+			}
+			cont = 0;
+
+			int arrsuperior[3];
+			int arrlateralderecho[3];
+			int arrinferior[3];
+			int arrlateralizquierdo[3];
+			for (int i = 0; i < 3; ++i)
+			{
+				for (int j = 0; j < 3; ++j)
+				{
+					if(i == 0){
+						arrsuperior[cont] = matriz1[i][j];
+						cont++;
+					} 
+					else if(j == 2){
+						arrlateralderecho[cont] = matriz1[i][j];
+						cont++;
+					}
+					else if(i == 2){
+						arrinferior[cont] = matriz1[i][j];
+						cont++;
+					}
+					else if(j == 0){
+						arrlateralizquierdo[cont] = matriz1[i][j];
+						cont++;
+					}
+				}
+				cont = 0;
+			} //for para llenar arreglos matriz 1
+			cont = 0;
+
+			for (int i = 0; i < 3; ++i)
+			{
+				for (int j = 0; j < 3; ++j)
+				{
+					if(i == 0){
+						matriz1[i][j] = arrlateralizquierdo[cont];
+						cont++;
+					} 
+					else if(j == 2){
+						matriz1[i][j] = arrsuperior[cont];
+						cont++;
+					}
+					else if(i == 2){
+						matriz1[i][j] = arrlateralderecho[cont];
+						cont++;
+					}
+					else if(j == 0){
+						matriz1[i][j] = arrinferior[cont];
+						cont++;
+					}
+
+				}
+				cont = 0;
+			} //for asignar valores nuevos matriz 1
+
+
+
+
+		} //fin opcion 1
+
+		
 		for (int h = 0; h <= 6; ++h){
 				for (int i = 0; i < 3; ++i){
 					for (int j = 0; j < 3; ++j){
@@ -93,6 +229,8 @@ int main(){
 				}
 				cout << endl;
 			}
+		cout << endl << "Quiere seguir? s/n ";
+		cin >> resp;
 
 	}
 
