@@ -1506,22 +1506,22 @@ int main(){
 				for (int i = 0; i < 3; ++i){
 					for (int j = 0; j < 3; ++j){
 						if (h == 1){
-							cout << matriz1[i][j] << " ";
+							cout << "["<< matriz1[i][j] << "] ";
 						}
 						else if(h == 2){
-							cout << matriz2[i][j] << " ";
+							cout << "["<< matriz2[i][j] << "] ";
 						}
 						else if(h == 3){
-							cout << matriz3[i][j] << " ";
-						}
+							cout <<"["<< matriz3[i][j] << "] ";
+						} 
 						else if(h == 4){
-							cout << matriz4[i][j] << " ";
+							cout <<"["<< matriz4[i][j] << "] ";
 						}
 						else if(h == 5){
-							cout << matriz5[i][j] << " ";
+							cout <<"["<< matriz5[i][j] << "] ";
 						}
 						else if(h == 6){
-							cout << matriz6[i][j] << " ";
+							cout <<"["<< matriz6[i][j] << "] ";
 						}
 					}
 					cout << endl;
