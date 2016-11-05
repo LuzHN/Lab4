@@ -1263,6 +1263,243 @@ int main(){
 
 		}
 
+		if(opcion == 11){
+			int arratras[3];
+			int arrabajo[3];
+			int arrfrente[3];
+			int arrarriba[3];
+
+			int cont = 0;
+			for (int h = 0; h <= 4; ++h){
+				for (int i = 0; i < 3; ++i){
+					for (int j = 0; j < 3; ++j){
+						if(h == 1){
+							if(j == 0){
+								arratras[cont] = matriz2[i][j];
+								cont++;
+							}
+						}
+						else if(h == 2){
+							if(j == 0){
+								arrabajo[cont] = matriz4[i][j];
+								cont++;
+							}
+						}
+						else if(h == 3){
+							if(j == 2){
+								arrfrente[cont] = matriz1[i][j];
+								cont++;
+							}
+						}
+						else if(h == 4){
+							if(j == 0){
+								arrarriba[cont] = matriz3[i][j];
+								cont++;
+							}
+						}
+
+
+					}
+				}
+				cont = 0;
+			}// fin for
+
+			cont = 0;
+
+			for (int h = 0; h <= 4; ++h){
+				for (int i = 0; i < 3; ++i){
+					for (int j = 0; j < 3; ++j){
+						if(h == 1){
+							if(j == 0){
+								matriz1[i][j] = arrarriba[cont];
+								cont++;
+							}
+						}
+						else if(h == 2){
+							if(i == 0){
+								matriz4[i][j] = arrfrente[cont];
+								cont++;
+							}
+						}
+						else if(h == 3){
+							if(j == 2){
+								matriz2[i][j] = arrabajo[cont];
+								cont++;
+							}
+						}
+						else if(h == 4){
+							if(i == 2){
+								matriz3[i][j] = arratras[cont];
+								cont++;
+							}
+						}
+					}
+				}
+				cont = 0;
+			} // fin for
+			cont = 0;
+
+			int arrsuperior[3];
+			int arrmedio[3];
+			int arrinferior[3];
+
+			for (int i = 0; i < 3; ++i){
+				for (int j = 0; j < 3; ++j){
+					if(i == 0){
+						arrsuperior[cont] = matriz6[i][j];
+						cont++;
+					}
+					else if(i == 1){
+						arrmedio[cont] = matriz6[i][j];
+						cont++;
+					}
+					else if(i == 2){
+						arrinferior[cont] = matriz6[i][j];
+						cont++;
+					}
+				}
+				cont = 0;
+			} //for para llenar arreglos matriz 1
+			cont = 0;
+
+			for (int i = 0; i < 3; ++i){
+				for (int j = 0; j < 3; ++j){
+					if(j == 0){
+						matriz6[i][j] = arrinferior[cont];
+						cont++;
+					}
+					else if(j == 1){
+						matriz6[i][j] = arrmedio[cont];
+						cont++;
+					}
+					else if(j == 2){
+						matriz6[i][j] = arrsuperior[cont];
+						cont++;
+					}
+
+				}
+				cont = 0;
+			} //for asignar valore
+		} //fin opcion 11
+		if(opcion == 12){
+			int arratras[3];
+			int arrabajo[3];
+			int arrfrente[3];
+			int arrarriba[3];
+
+			int cont = 0;
+			for (int h = 0; h <= 4; ++h){
+				for (int i = 0; i < 3; ++i){
+					for (int j = 0; j < 3; ++j){
+						if(h == 1){
+							if(j == 0){
+								arratras[cont] = matriz2[i][j];
+								cont++;
+							}
+						}
+						else if(h == 2){
+							if(j == 0){
+								arrabajo[cont] = matriz4[i][j];
+								cont++;
+							}
+						}
+						else if(h == 3){
+							if(j == 2){
+								arrfrente[cont] = matriz1[i][j];
+								cont++;
+							}
+						}
+						else if(h == 4){
+							if(j == 0){
+								arrarriba[cont] = matriz3[i][j];
+								cont++;
+							}
+						}
+
+
+					}
+				}
+				cont = 0;
+			}// fin for
+
+			cont = 0;
+
+			for (int h = 0; h <= 4; ++h){
+				for (int i = 0; i < 3; ++i){
+					for (int j = 0; j < 3; ++j){
+						if(h == 1){
+							if(j == 0){
+								matriz1[i][j] = arrabajo[cont];
+								cont++;
+							}
+						}
+						else if(h == 2){
+							if(i == 0){
+								matriz4[i][j] = arratras[cont];
+								cont++;
+							}
+						}
+						else if(h == 3){
+							if(j == 2){
+								matriz2[i][j] = arrarriba[cont];
+								cont++;
+							}
+						}
+						else if(h == 4){
+							if(i == 2){
+								matriz3[i][j] = arrfrente[cont];
+								cont++;
+							}
+						}
+					}
+				}
+				cont = 0;
+			} // fin for
+			cont = 0;
+
+			int arrsuperior[3];
+			int arrmedio[3];
+			int arrinferior[3];
+
+			for (int i = 0; i < 3; ++i){
+				for (int j = 0; j < 3; ++j){
+					if(i == 0){
+						arrsuperior[cont] = matriz6[i][j];
+						cont++;
+					}
+					else if(i == 1){
+						arrmedio[cont] = matriz6[i][j];
+						cont++;
+					}
+					else if(i == 2){
+						arrinferior[cont] = matriz6[i][j];
+						cont++;
+					}
+				}
+				cont = 0;
+			} //for para llenar arreglos matriz 1
+			cont = 0;
+
+			for (int i = 0; i < 3; ++i){
+				for (int j = 0; j < 3; ++j){
+					if(j == 0){
+						matriz6[i][j] = arrinferior[cont];
+						cont++;
+					}
+					else if(j == 1){
+						matriz6[i][j] = arrmedio[cont];
+						cont++;
+					}
+					else if(j == 2){
+						matriz6[i][j] = arrsuperior[cont];
+						cont++;
+					}
+
+				}
+				cont = 0;
+			} //for asignar valore
+		}
+
 
 
 		for (int h = 0; h <= 6; ++h){
